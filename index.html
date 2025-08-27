@@ -47,7 +47,7 @@
           <div
             class="font-black py-3 px-9 rounded-full bg-green-50 text-black flex items-center gap-2"
           >
-            <p>0</p>
+            <p id="hart-counter">0</p>
             <img src="./assets/heart.png" alt="" class="h-6 w-6" />
           </div>
           <div
@@ -85,7 +85,7 @@
     </header>
 
     <main class="bg-green-50 px-16 py-10 grid grid-cols-12 gap-8">
-      <section class="col-span-9 grid grid-cols-3 gap-8">
+      <section class="col-span-9 grid grid-cols-3 gap-8" id="cards-box">
         <div class="bg-white p-6 rounded-xl shadow-md flex flex-col gap-4">
           <div class="flex justify-between items-center">
             <img
@@ -93,7 +93,7 @@
               alt="emergency"
               class="w-10 bg-red-100 p-2 rounded-xl"
             />
-            <i class="fa-regular fa-heart text-2xl text-gray-600"></i>
+            <i class="fa-regular fa-heart text-2xl text-gray-600 cursor-pointer hert-btn"></i>
           </div>
           <div>
             <h3 class="text-2xl font-bold">জাতীয় জরুরি সেবা</h3>
@@ -119,7 +119,7 @@
               alt="emergency"
               class="w-10 bg-blue-100 p-2 rounded-xl"
             />
-            <i class="fa-regular fa-heart text-2xl text-gray-600"></i>
+            <i class="fa-regular fa-heart text-2xl text-gray-600 cursor-pointer hert-btn"></i>
           </div>
           <div>
             <h3 class="text-2xl font-bold">পুলিশ</h3>
@@ -145,7 +145,7 @@
               alt="emergency"
               class="w-10 bg-red-100 p-2 rounded-xl"
             />
-            <i class="fa-regular fa-heart text-2xl text-gray-600"></i>
+            <i class="fa-regular fa-heart text-2xl text-gray-600 cursor-pointer hert-btn"></i>
           </div>
           <div>
             <h3 class="text-2xl font-bold">ফায়ার সার্ভিস</h3>
@@ -171,7 +171,7 @@
               alt="emergency"
               class="w-10 bg-red-100 p-2 rounded-xl"
             />
-            <i class="fa-regular fa-heart text-2xl text-gray-600"></i>
+            <i class="fa-regular fa-heart text-2xl text-gray-600 cursor-pointer hert-btn"></i>
           </div>
           <div>
             <h3 class="text-2xl font-bold">অ্যাম্বুলেন্স</h3>
@@ -197,7 +197,7 @@
               alt="emergency"
               class="w-10 bg-red-100 p-2 rounded-xl"
             />
-            <i class="fa-regular fa-heart text-2xl text-gray-600"></i>
+            <i class="fa-regular fa-heart text-2xl text-gray-600 cursor-pointer hert-btn"></i>
           </div>
           <div>
             <h3 class="text-2xl font-bold">নারী ও শিশু সহায়তা</h3>
@@ -223,7 +223,7 @@
               alt="emergency"
               class="w-10 bg-red-100 p-2 rounded-xl"
             />
-            <i class="fa-regular fa-heart text-2xl text-gray-600"></i>
+            <i class="fa-regular fa-heart text-2xl text-gray-600 cursor-pointer hert-btn"></i>
           </div>
           <div>
             <h3 class="text-2xl font-bold">দুদক</h3>
@@ -249,7 +249,7 @@
               alt="emergency"
               class="w-10 bg-red-100 p-2 rounded-xl"
             />
-            <i class="fa-regular fa-heart text-2xl text-gray-600"></i>
+            <i class="fa-regular fa-heart text-2xl text-gray-600 cursor-pointer hert-btn"></i>
           </div>
           <div>
             <h3 class="text-2xl font-bold">বিদ্যুৎ বিভ্রাট</h3>
@@ -275,7 +275,7 @@
               alt="emergency"
               class="w-10 bg-red-100 p-2 rounded-xl"
             />
-            <i class="fa-regular fa-heart text-2xl text-gray-600"></i>
+            <i class="fa-regular fa-heart text-2xl text-gray-600 cursor-pointer hert-btn"></i>
           </div>
           <div>
             <h3 class="text-2xl font-bold">ব্র্যাক</h3>
@@ -301,7 +301,7 @@
               alt="emergency"
               class="w-10 bg-red-100 p-2 rounded-xl"
             />
-            <i class="fa-regular fa-heart text-2xl text-gray-600"></i>
+            <i class="fa-regular fa-heart text-2xl text-gray-600 cursor-pointer hert-btn"></i>
           </div>
           <div>
             <h3 class="text-2xl font-bold">বাংলাদেশ রেলওয়ে</h3>
@@ -321,8 +321,11 @@
           </div>
         </div>
       </section>
-      <aside class=" col-span-3">
-        
+      <aside class="col-span-3 bg-white p-6 rounded-xl shadow-md">
+        <div class="flex flex-row justify-between items-center mb-6">
+          <h4v class="font-medium text-xl "><i class="fa-regular fa-clock"></i> Call History</h4>
+          <button class="btn bg-green-500 text-white py-2 px-5 rounded-full">Clear</button>
+        </div>
       </aside>
     </main>
 
