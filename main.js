@@ -6,7 +6,9 @@ function getElement(id) {
 let hertCount = 0;
 const hartCounter = getElement("hart-counter");
 const coinCounter = getElement("coin-counter");
+const copyCounter = getElement("copy-countrer");
 let coinCount = Number(coinCounter.innerText);
+let copyCount = Number(copyCounter.innerText);
 
 getElement("cards-box").addEventListener("click", function (e) {
   if (e.target.className.includes("hert-btn")) {
@@ -43,6 +45,21 @@ getElement("cards-box").addEventListener("click", function (e) {
       alert("আপনার কয়েন শেষ।");
       return;
     }
+  } else if (e.target.className.includes("copy-btn")) {
+    const copyBtn = e.target;
+    // console.log("copy btn clicked");
+    // alert("Number Copied");
+    copyCount++;
+    copyCounter.innerText = copyCount;
+    const number = copyBtn.parentNode.parentNode.children[2].children[0].innerText;
+
+    navigator.clipboard.writeText(number)
+        .then(() => {
+          alert(`${number} copied to clipboard!`);
+        })
+        .catch(err => {
+          console.error("Failed to copy Number: ", err);
+        });
   }
 });
 
